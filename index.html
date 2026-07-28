@@ -1,72 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Watch Full Video</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- FB SAFE META -->
-<meta name="description" content="Watch the full video here">
-<meta property="og:title" content="Watch Full Video">
-<meta property="og:description" content="Tap to continue watching">
-<meta property="og:type" content="website">
-
-<!-- AUTO REDIRECT (ubah link tujuan) -->
-<meta http-equiv="refresh" content="3;url=https://condenseddisgustingconform.com/d968drwn1s?key=b074bab9d3d0de408cab9f71d75aaea4">
-
+<title>MOOD MEDIA</title>
 <style>
-body{
+*{
+  box-sizing:border-box;
   margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg,#000,#1a1a1a);
-  color:#fff;
-  height:100vh;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:
+  radial-gradient(circle,#4b0025 0%,#12000a 35%,#000 100%);
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
+  min-height:100vh;
 }
-.box{
-  text-align:center;
-  padding:30px;
-  max-width:420px;
+
+/* CARD */
+.container{
+    width:92%;
+    max-width:430px;
+
+    padding:15px;
+
+    background:#fff;
+
+    border-radius:32px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:
+      0 0 30px rgba(255,255,255,.8),
+      0 0 60px rgba(255,0,128,.6),
+      0 0 120px rgba(255,0,128,.35);
 }
-h1{
-  font-size:28px;
-  margin-bottom:10px;
+
+.container::before{
+    display:none;
 }
-p{
-  opacity:0.85;
+
+/* TITLE */
+.title{
+    color:#111;
+    font-size:24px;
+    font-weight:800;
+    font-family:'Outfit',sans-serif;
+    margin-bottom:25px;
 }
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:15px 40px;
-  background:#ff004f;
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:50px;
-  font-size:16px;
+
+/* BUTTON BASE */
+.elite-btn{
+    position:relative;
+    width:100%;
+    height:68px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:20px 0;
+
+    text-decoration:none;
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0a0a0a,
+        #1b1b1b,
+        #0a0a0a
+    );
+
+    border:2px solid #ffd700;
+
+    box-shadow:
+        0 0 12px rgba(255,215,0,.4),
+        inset 0 0 12px rgba(255,215,0,.1);
+
+    color:#ffffff;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:1.5px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.6),
+        0 0 20px rgba(255,215,0,.12);
+
+    transition:.4s ease;
 }
-.timer{
-  margin-top:15px;
-  font-size:13px;
-  opacity:0.6;
+
+.elite-btn::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #ffd700,
+        #fff,
+        #ffd700,
+        transparent
+    );
+
+    background-size:300% 100%;
+
+    border-radius:20px;
+
+    animation:borderFlow 4s linear infinite;
+
+    z-index:0;
 }
+
+.elite-btn::after{
+    content:"";
+    position:absolute;
+    inset:2px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #1a1a1a,
+        #090909
+    );
+
+    border-radius:16px;
+
+    z-index:1;
+}
+
+.elite-btn span{
+    position:relative;
+    z-index:2;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.15);
+}
+
+.elite-btn span::before{
+    content:"";
+    position:absolute;
+    top:-25px;
+    left:-120px;
+
+    width:40px;
+    height:120px;
+
+    background:rgba(255,255,255,.4);
+
+    transform:rotate(25deg);
+
+    filter:blur(8px);
+
+    animation:shine 3s infinite;
+}
+
+.elite-btn:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.8),
+        0 0 35px rgba(255,215,0,.25);
+}
+
+@keyframes borderFlow{
+    0%{
+        background-position:0% 50%;
+    }
+    100%{
+        background-position:300% 50%;
+    }
+}
+
+@keyframes shine{
+    0%{
+        left:-120px;
+    }
+    100%{
+        left:350px;
+    }
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.divider span{
+    width:110px;
+    height:1px;
+    background:#d4af37;
+}
+
+.dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#d4af37;
+    box-shadow:0 0 15px rgba(212,175,55,.8);
+}
+
 </style>
 </head>
 
 <body>
-  <div class="box">
-    <h1>🎥 Full Video</h1>
-    <p>You’ll be redirected automatically</p>
 
-    <!-- CTA MANUAL -->
-    <a class="btn" href="https://condenseddisgustingconform.com/d968drwn1s?key=b074bab9d3d0de408cab9f71d75aaea4">WATCH NOW</a>
+<div class="container">
 
-    <div class="timer">
-      Redirecting in 3 seconds…
-    </div>
-  </div>
-</body>
-</html>
+	<div class="title"> Video streaming Online </div>
+
+    <!-- DESCRIPTION -->
+    <div class="desc">
+    Fast and simple video streaming experience , try another available link below 👇
+	</div>
+
+<a href="#" id="btn1" class="elite-btn" target="_blank">
+    <span>▶ Watch Video</span>
+</a>
+  
+<a href="#" id="btn2" class="elite-btn" target="_blank">
+    <span>▶ Alternative Link</span>
+</a>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const dynamicId = params.get('video') || 'DEFAULT12';
+
+const links = [
+  'https://t.co/aga94shMfd',
+  `https://t.co/mj9OzU4hcz`
+];
+
+// Acak posisi link setiap refresh
+const shuffled = [...links].sort(() => Math.random() - 0.5);
+
+document.getElementById('btn1').href = shuffled[0];
+document.getElementById('btn2').href = shuffled[1];
+</script>
